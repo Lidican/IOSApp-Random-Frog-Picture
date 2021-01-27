@@ -13,6 +13,9 @@ struct ContentView: View {
     @State var showDetails = false
     
     var body: some View {
+        ZStack{
+            Color.green
+                .ignoresSafeArea()
         VStack {
             Button(action: {
             self.showDetails.toggle()
@@ -28,7 +31,7 @@ struct ContentView: View {
                 .padding(7)
         }
             if showDetails{
-                let number = Int.random(in: 1...10)
+                let number = Int.random(in: 1...21)
                 let phrogg = String(number)
                 VStack{
                 Text(tap)
@@ -37,10 +40,12 @@ struct ContentView: View {
                     .frame(width: 300, height: 300)
                     .cornerRadius(40)
                     .padding()
+                    
                 }
                 .background(ColorManager.phrogggreen)
                 .cornerRadius(40)
             }
+    }
     }
     }
 }
